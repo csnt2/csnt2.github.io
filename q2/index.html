@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="full-height large-screen">
+    <head>
+<meta charset="utf-8">
+<title>CSDD eksāmeni</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="http://csnt2.csdd.lv/images/nok.png">
+<meta property="og:url" content="http://csnt2.csdd.lv/">
+<meta property="og:title" content="CSDD teorijas eksāmens ar video jautājumiem.">
+<meta property="og:description" content="Es kārtoju CSDD teorijas eksāmenu.">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-60x60.png">
+<link href="/css/roboto.css" rel="stylesheet" type="text/css">
+<link href="/styles/main.css" rel="stylesheet" type="text/css">
+<link href="/scripts/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery.timepicker.css" rel="stylesheet" type="text/css">
+<script src="/scripts/jquery-2.1.4.min.js"></script>
+<script src="/scripts/jquery-ui.min.js"></script>
+<script src="/scripts/vendor/simple-lightbox.min.js"></script>
+<script src="/scripts/eksamens/main.min.js"></script>
+<style>
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+body  h3 {
+	font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+</style>
+</head>
+<body>
+
+
+<header id="header" class="header-eksamens eksamens-user csn">
+        <div class="header-split-left">
+			<div class="expand-14-of-24-desktop csn-title">
+				
+                <a class="valoda" style="margin:0px 20px 0px 0px" href="/LAT"><p>LAT</p></a>
+				
+                <a class="valoda" style="margin:0px 20px 0px 0px" href="/RUS"><p>RUS</p></a>
+				
+                <a class="valoda" style="margin:0px 20px 0px 0px" href="/ENG"><p>ENG</p></a>
+				
+				<a class="valoda" style="margin:0px 20px 0px 0px" href="/new"><p>Sākums</p></a>
+            </div>
+            <div class="csn-group">
+                <div class="csn-title">
+                    <p>Teorijas eksāmens</p>
+                </div>
+                <div class="csn-question"><small>Jautājums</small> 30/30</div>
+                <div class="csn-time" val="1440"><small>Laiks</small><span>24:01</span></div>
+            </div>
+        </div>
+        <div class="header-split-right">
+            <div class="profile-select js-profile-select">
+            </div>
+        </div>
+    </header>
+
+
+	<main id="page-eksamens" class="full-width-container csn">
+		
+        <section>
+            <div class="grid-row full-height">
+                <div class="columns-14-of-24-desktop question-column full-height">
+                    
+					<div class="img-group ratio16-9">
+                        <div class="content-container lightbox-image contain-image js-lightbox-image" style="background-image:url('https://csnt2.csdd.lv/bildes/b/17_Prieksrocibas_mainot_brauksanas_virzienu_uzsakot_braukt/17_7.(68 b).jpg')">
+                            <a href="https://csnt2.csdd.lv/bildes/b/17_Prieksrocibas_mainot_brauksanas_virzienu_uzsakot_braukt/17_7.(68 b).jpg" class="link-plain" style="display:none;"></a>
+                        </div>
+                    </div>
+					
+					
+                    <div class="text-group">
+						
+                        <h3 class="text">Kura automobiļa vadītājam ir priekšroka? </h3>
+						
+                        
+						
+                        
+						
+					</div>
+                </div>
+                <div class="columns-6-of-24-desktop options-column full-height">
+                    <form id="atb">
+						<input type="hidden" name="exj_id" id="exj_id" value="1322">
+						<input type="hidden" name="ece_id" id="ece_id" value="576613155">
+						<input type="hidden" name="eceja_id" id="eceja_id" value="576613155">
+                        <fieldset>
+							
+							
+                            <label class="block-label selected" for="atbilde-3875">
+								<input id="atbilde-3875" type="radio" name="atbilde" value="3875">
+								
+									Vieglā automobiļa vadītājam. 
+								
+									
+								
+									
+								
+							</label>
+							
+                            <label class="block-label" for="atbilde-3874">
+								<input id="atbilde-3874" type="radio" name="atbilde" value="3874">
+								
+									Kravas automobiļa vadītājam. 
+								
+									
+								
+									
+								
+							</label>
+							
+							
+                        </fieldset>
+                        <div class="controls-group">
+                            <a class="button" type="submit" href="https://csnt2.github.io/index.html">Nākamais jautājums</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+		
+    </main>
+<script type="text/javascript">
+$(function() {
+	$('#atb input[name=atbilde]').change(function() {
+		if ($('#atb input[name=atbilde]:checked').size()>0) {
+			$('#atbbtn').prop('disabled',false);
+		} else {
+			$('#atbbtn').prop('disabled',true);
+		}
+	});
+	$('#atb').submit(function(event) {
+		event.preventDefault();
+		var atbildes = [];
+		$('#atb input[name=atbilde]').each(function() {
+			atbildes.push({
+				exa_id : $(this).val(),
+				sel : $(this).is(":checked")
+			});
+		});
+		$.ajax({
+				url: '/LAT/atb_ins',
+				global: true,
+				type: "POST",
+				data:{
+					perform : 'confirm',
+					eceja_id : $('#eceja_id').val(),
+					ece_id : $('#ece_id').val(),
+					exj_id : $('#exj_id').val(),
+					atbildes :  atbildes
+				},
+				dataType: 'json',
+				async: true,
+				success: function(data){
+					$('.error-summary').remove();
+					$('.error-message').remove();
+					if (jQuery.isEmptyObject(data.errors)==false) {
+						$( "<div></div>" ).html(data.errors).appendTo("body").remove();
+					}
+					if (jQuery.isEmptyObject(data.msg)==false) {
+						window.location.href = '/LAT';
+					}
+				}
+			});
+		return false;
+	})
+	secondsTimeSpanToHMS = function(s) {
+		var m = Math.floor(s/60); //Get remaining minutes
+		s -= m*60;
+		return (m < 10 ? '0'+m : m)+":"+(s < 10 ? '0'+s : s); //zero padding on minutes and seconds
+	}
+	var tovar;
+	addTime = function() {
+		var ttm = parseInt($('#header div.csn-time').attr('val'));
+		if (ttm<0) {
+			ttm=0;
+			location.reload();
+		}
+		$('#header div.csn-time span').html(secondsTimeSpanToHMS(ttm));
+		$('#header div.csn-time').attr('val', ttm-1);
+		var tovar = setTimeout(addTime, 1000);
+	}
+	addTime();
+});
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-17240480-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-17240480-13');
+</script>
+<script type="text/javascript">
+$(function() {
+	$(document).ready(function(){
+		$(this).bind("contextmenu", function(e) {
+			e.preventDefault();
+		});
+	});
+});
+</script>
+
+
+
+
+
+</body>
+    </html>
